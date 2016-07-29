@@ -10,11 +10,16 @@ describe('Split Array function', function() {
   it('is able to handle an empty array', function() {
     expect( split([])).toEqual([]);
   });
+
 });
 
 describe('Merge', function(){
   it('is able to merge two sorted arrays into one sorted array when both are equal size', function(){
     expect( merge([4,5],[1,3])).toEqual([1,3,4,5]);
+  });
+
+   it('is able to MERGE an array of even length', function(){
+    expect( merge([4,5,19],[1,2,6])).toEqual([1,2,4,5,6,19]);
   });
 
   it('is able to merge two sorted arrays of different sizes', function(){
